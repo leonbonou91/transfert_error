@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfert</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body{
+            font-size: 15px;
+        }
+        .container{
+            margin: 20px;
+        }
+        .text-align{
+            text-align: center;
+        }
+        .display-row{
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h4 class="text-align">OVERFØRSELSSTATUS</h4>
+        <hr>
+        <div class="display-row">
+
+            <div>
+                <i class="fa fa-bank"> </i> <span> Bank </span>
+            </div>
+            <div>
+                Danske Bank
+            </div>
+        </div>
+
+        <div class="display-row" style="margin-top: 15px;">
+        
+            <div>
+                <i class="fa fa-user"> </i> <span> MODTAGER </span>
+            </div>
+            <div>
+                KAMILLA PEDERSEN
+            </div>
+        </div>
+
+        <div class="display-row" style="margin-top: 15px;">
+        
+            <div>
+                <i class="fa fa-money"> </i> <span> Beløb overført </span>
+            </div>
+            <div>
+                25,000.00 KR
+            </div>
+        </div>
+
+        <div class="display-row" style="margin-top: 15px;">
+        
+            <div>
+                <i class="fa fa-id-card"> </i> <span> Banknummer </span>
+            </div>
+            <div>
+                4426-4955368584
+            </div>
+        </div>
+
+        <div class="display-row" style="margin-top: 15px;">
+        
+            <div>
+                <i class="fa fa-calendar-times-o"> </i> <span> Dateret </span>
+            </div>
+            <div>
+                14/02/2022
+            </div>
+        </div>
+
+        <div class="display-row" style="margin-top: 15px;">
+        
+            <div>
+                <i class="fa fa-id-badge"> </i> <span> ID </span>
+            </div>
+            <div>
+                DK12XXXXXX014
+            </div>
+        </div>
+        <!-- <div style="margin-top: 25px; text-align: center; ">
+            <span style="font-size: 18px; padding: 5px 20px; background-color: #fff; border-radius: 30px; color: darkslategray;">
+                <i class="fa fa-money"> </i> 
+                3.000.000 nok
+            </span>
+        </div> -->
+
+
+        <div class="loader-container">
+            <div class="progress float shadow">
+                <div class="progress__item">
+                    <span id="showPour"></span>%
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div style="display: flex;height: 600px; align-items: center; justify-content: center;">
+        
+        <div>
+            
+            <div><i class="fa fa-chevron-right" style="font-size: 60px;"></i></div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/myscript.js"></script>
+</body>
+</html>

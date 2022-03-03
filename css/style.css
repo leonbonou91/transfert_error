@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'muller-light';
+    src: url('../font/MullerNarrowLight.otf');
+}
+@font-face {
+    font-family: 'muller-medium';
+    src: url('../font/MullerNarrowMedium.otf');
+}
+@font-face {
+    font-family: 'muller-bold';
+    src: url('../font/MullerExtraBold.otf');
+}
+body {
+  margin: 0;
+  font-size: 26px;
+  color: #fff;
+  background-color: #035181;
+  overflow: hidden;
+  font-family: 'muller-light';
+}
+
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #035181;
+  z-index: -1;
+  -webkit-transition: top 1.2s linear 3.1s;
+  transition: top 1.2s linear 3.1s;
+}
+
+.loader-container:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #035181;
+  z-index: -1;
+  -webkit-transition: bottom 1.2s linear 3.1s;
+  transition: bottom 1.2s linear 3.1s;
+}
+
+.loader-container.done:before {
+  top: -50%;
+}
+
+.loader-container.done:after {
+  bottom: -50%;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.progress .progress__item {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.progress .progress__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: -3px;
+  margin-left: 0px;
+  width: 45px;
+  height: 45px;
+  border-top: solid 10px #fff;
+  border-right: solid 10px #fff;
+  border-top-right-radius: 100%;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-animation: spin 3s linear infinite;
+}
+
+.progress.float .progress__item:before {
+  border-top-width: 2px;
+  margin-top: 0px;
+  height: 50px;
+}
+
+.progress.float.shadow:before {
+  border-top-width: 2px;
+  margin-top: -41px;
+  height: 50px;
+}
+
+.progress.shadow:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -43px 0 0 12px;
+  width: 45px;
+  height: 45px;
+  border-top: solid 10px #2bb471;
+  border-right: solid 10px #2bb471;
+  border-top-right-radius: 100%;
+  z-index: -1;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-animation: spin 3s linear infinite;
+}
+
+.progress.shadow:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  color: #2bb471;
+  text-align: center;
+  line-height: 100px;
+  border: 2px solid #2bb471;
+  border-radius: 50%;
+  margin: -40px 0 0 -40px;
+  z-index: -1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.progress.done .progress__item {
+  opacity: 0;
+  -webkit-animation: done 3.1s;
+  -webkit-transition: opacity 0.3s linear 3.1s;
+  transition: opacity 0.3s linear 3.1s;
+}
+
+.progress.done .progress__item:before {
+  display: none;
+}
+
+.progress.done:before {
+  display: none;
+}
+
+.progress.done:after {
+  opacity: 0;
+  -webkit-animation: done 3.1s;
+  -webkit-transition: opacity 0.15s linear 3.1s;
+  transition: opacity 0.15s linear 3.1s;
+}
+
+@-webkit-keyframes done {
+  10% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  20% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  30% {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+  }
+  40% {
+    -webkit-transform: scale(0.93);
+            transform: scale(0.93);
+  }
+  50% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+  60% {
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+  }
+  80% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  90% {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
